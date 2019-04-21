@@ -4,25 +4,40 @@ Blockly.defineBlocksWithJsonArray([
   {
     "type": "forward",
     "message0": "forward",
+    "previousStatement": null,
+    "nextStatement": null,
     "colour":160,
-    "output": null,
-    "style": "text_blocks",
     "helpUrl": "",
-    "tooltip": "move forward by 1",
+    "tooltip": "move forward by 1"
   },
   {
-    "type": "string_length",
-    "message0": 'length of %1',
-    "args0": [
-      {
-        "type": "input_value",
-        "name": "VALUE",
-        "check": "String"
-      }
-    ],
-    "output": "Number",
-    "colour": 160,
-    "tooltip": "Returns number of letters in the provided text.",
-    "helpUrl": "http://www.w3schools.com/jsref/jsref_length_string.asp"
+    "type": "backward",
+    "message0": "backward",
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour":160,
+    "helpUrl": "",
+    "tooltip": "move backward by 1"
   },
+  {
+    "type": "left",
+    "message0": "left",
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour":160,
+    "helpUrl": "",
+    "tooltip": "turn left by 1 path"
+  },
+  {
+    "type": "right",
+    "message0": "right",
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour":160,
+    "helpUrl": "",
+    "tooltip": "turn right by 1 path"
+  },
+
 ])
+
+
