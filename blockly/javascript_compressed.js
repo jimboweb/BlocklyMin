@@ -94,20 +94,6 @@ Blockly.JavaScript.text_count=function(a){var b=Blockly.JavaScript.valueToCode(a
 Blockly.JavaScript.text_replace=function(a){var b=Blockly.JavaScript.valueToCode(a,"TEXT",Blockly.JavaScript.ORDER_MEMBER)||"''",c=Blockly.JavaScript.valueToCode(a,"FROM",Blockly.JavaScript.ORDER_NONE)||"''";a=Blockly.JavaScript.valueToCode(a,"TO",Blockly.JavaScript.ORDER_NONE)||"''";return[Blockly.JavaScript.provideFunction_("textReplace",["function "+Blockly.JavaScript.FUNCTION_NAME_PLACEHOLDER_+"(haystack, needle, replacement) {",'  needle = needle.replace(/([-()\\[\\]{}+?*.$\\^|,:#<!\\\\])/g,"\\\\$1")',
 '                 .replace(/\\x08/g,"\\\\x08");',"  return haystack.replace(new RegExp(needle, 'g'), replacement);","}"])+"("+b+", "+c+", "+a+")",Blockly.JavaScript.ORDER_MEMBER]};Blockly.JavaScript.text_reverse=function(a){return[(Blockly.JavaScript.valueToCode(a,"TEXT",Blockly.JavaScript.ORDER_MEMBER)||"''")+".split('').reverse().join('')",Blockly.JavaScript.ORDER_MEMBER]};Blockly.JavaScript.variables={};Blockly.JavaScript.variables_get=function(a){return[Blockly.JavaScript.variableDB_.getName(a.getFieldValue("VAR"),Blockly.Variables.NAME_TYPE),Blockly.JavaScript.ORDER_ATOMIC]};Blockly.JavaScript.variables_set=function(a){var b=Blockly.JavaScript.valueToCode(a,"VALUE",Blockly.JavaScript.ORDER_ASSIGNMENT)||"0";return Blockly.JavaScript.variableDB_.getName(a.getFieldValue("VAR"),Blockly.Variables.NAME_TYPE)+" = "+b+";\n"};
 Blockly.JavaScript.variablesDynamic={};Blockly.JavaScript.variables_get_dynamic=Blockly.JavaScript.variables_get;Blockly.JavaScript.variables_set_dynamic=Blockly.JavaScript.variables_set;
-Blockly.JavaScript['forward'] = function(block) {
-    var code = 'console.log("move forward");\n';
-    return  code;
-};
-Blockly.JavaScript['backward'] = function(block) {
-    var code = 'console.log("move backward");\n';
-    return  code;
-};
-Blockly.JavaScript['left'] = function(block) {
-    var code = 'console.log("move left");\n';
-    return  code;
-};
-Blockly.JavaScript['right'] = function(block) {
-    var code = 'console.log("move right");\n';
-    return  code;
-};
+let speed = 20;
+
 

@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Blockly minimum</title>
+    <style>
+        section {
+            width:600px;
+            height:300px;
+            border: black solid 1px;
+        }
+    </style>
     <script src="blockly/blockly_compressed.js"></script>
     <script src="blockly/blocks/text.js"></script>
     <script src="blockly/blocks/motion.js"></script>
     <script src="blockly/javascript_compressed.js"></script>
+    <script src="p5/p5.js"></script>
+    <script src="p5/p5.play.js"></script>
+    <script src="blockly/blocks/customBlockScript.js"></script>
 </head>
 <body>
 
-    <div id="blocklyDiv" style="width:600px;height:400px;"></div>
+    <section id="board">
+    </section>
+    <section id="blocklyDiv"></section>
     <div id="buttons" style="display:flex">
         <div id="showCodeButton"><button onclick="showCode()">Show Code</button> </div>
         <div id="runCodeButton"><button onclick="runCode()">Run Code</button> </div>
@@ -49,5 +61,6 @@
         }
 
     </script>
+    <script src="p5/boardScript.js"></script>
 </body>
 </html>
